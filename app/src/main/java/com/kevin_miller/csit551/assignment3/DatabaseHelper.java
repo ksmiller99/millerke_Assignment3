@@ -7,9 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.kevin_miller.csit551.assignment3.DBContract.*;
-
-import java.util.Date;
+import com.kevin_miller.csit551.assignment3.DBContract.FeedEntry;
 
 /**
  * Created by Kevin on 3/30/2016.
@@ -47,10 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(FeedEntry.COL_EMAIL,email);
         contentValues.put(FeedEntry.COL_PASS,password);
         long result = db.update(FeedEntry.TABLE_NAME, contentValues, "ID=?", new String[]{id});
-        if(result == -1)
-            return false;
-        else
-            return true;
+        return result != -1;
     }
 
     public Integer deleteData(String id){
@@ -86,16 +81,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(FeedEntry.COL_EMAIL,email.toLowerCase());
         contentValues.put(FeedEntry.COL_PASS,password);
         long result = db.insert(FeedEntry.TABLE_NAME,null, contentValues);
-        if(result == -1)
-            return false;
-        else
-            return true;
+        return result != -1;
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + FeedEntry.TABLE_NAME);
         onCreate(db);
+    }
+
+    public Cursor login(String username, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String sql = "SELECT * FROM " + FeedEntry.TABLE_NAME + " WHERE " + FeedEntry.COL_USERNAME + " = '" + username + "' AND " + FeedEntry.COL_PASS + " = '" + password + "';";
+        try {
+            Cursor cursor = db.rawQuery(sql, null);
+            return cursor;
+        } catch (Exception e) {
+            Log.d("KSM", "SQL Login exception");
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

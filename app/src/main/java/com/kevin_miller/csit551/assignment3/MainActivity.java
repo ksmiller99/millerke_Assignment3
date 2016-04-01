@@ -3,20 +3,28 @@ package com.kevin_miller.csit551.assignment3;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private DatabaseHelper myDB;
+
+    MyApplication app;
+
+    EditText etUsername;
+    EditText etPassword;
+    Button btnLogin;
+    Button btnForgotPassword;
+    Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +34,43 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         myDB = new DatabaseHelper(this);
+        app = (MyApplication) getApplication();
 
-        Button reg_button = (Button) findViewById(R.id.ma_btnRegister);
-        reg_button.setOnClickListener(new View.OnClickListener() {
+        etUsername = (EditText) findViewById(R.id.ma_etUserName);
+        etPassword = (EditText) findViewById(R.id.ma_etPassword);
+
+        btnLogin = (Button) findViewById(R.id.ma_btnLogIn);
+        btnRegister = (Button) findViewById(R.id.ma_btnRegister);
+        btnForgotPassword = (Button) findViewById(R.id.ma_btnForgotPasword);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
+                if (!username.isEmpty() && !password.isEmpty()) {
+                    Cursor cursor = myDB.login(username, password);
+                    if ((cursor != null) && (cursor.getCount() != 0)) {
+                        cursor.moveToFirst();
+                        app.setUsername(cursor.getString(1));
+                        app.setFullname(cursor.getString(2));
+                        app.setDob(cursor.getString(3));
+                        app.setMajor(cursor.getString(4));
+                        app.setEmail(cursor.getString(5));
+                        Intent intent = new Intent(MainActivity.this, LandingScreen.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Login error. Check inputs and try again.", Toast.LENGTH_LONG).show();
+                    }
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "You must input a username and password to log in.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RegistrationPage.class);
@@ -36,18 +78,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //go to landing page after inputting username and password without validating
-        EditText editText_password = (EditText) findViewById(R.id.editText_password_MA2);
-        editText_password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                Intent intent = new Intent(MainActivity.this, LandingScreen.class);
-                startActivity(intent);
-                return false;
-            }
-        });
+//        //go to landing page after inputting username and password without validating
+//        etPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//            @Override
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                Intent intent = new Intent(MainActivity.this, LandingScreen.class);
+//                startActivity(intent);
+//                return false;
+//            }
+//        });
 
-        Button btnForgotPassword = (Button) findViewById(R.id.ma_btnForgotPasword);
         btnForgotPassword.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -72,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         MenuItem history = menu.findItem(R.id.action_history);
         MenuItem notes = menu.findItem(R.id.action_notes);
 
-        MyApplication app = (MyApplication) getApplication();
+//        MyApplication app = (MyApplication) getApplication();
 
         if (app.getUsername().isEmpty()){
             // disabled

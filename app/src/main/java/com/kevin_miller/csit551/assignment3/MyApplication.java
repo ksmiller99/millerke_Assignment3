@@ -8,6 +8,9 @@ import android.app.Application;
 public class MyApplication extends Application {
     private String username = "";
     private String fullname = "";
+    private String dob = "";
+    private String major = "";
+    private String email = "";
 
     private static MyApplication singleton;
 
@@ -22,18 +25,46 @@ public class MyApplication extends Application {
     }
 
     public void setUsername(String username) {
+
         this.username = username;
     }
 
     public String getUsername() {
+
         return username;
     }
 
     public void setFullname(String fullname) {
+
         this.fullname = fullname;
     }
 
     public String getFullname() {
+
         return fullname;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Username: "
-            android:id="@+id/text_name_MA_1"
+
             />
 
         <EditText
@@ -46,14 +46,14 @@
             android:inputType="textPersonName"
             android:hint="Enter your username"
             android:ems="10"
-            android:id="@+id/editText_name_MA1"
+            android:id="@+id/ma_etUserName"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Password: "
-            android:id="@+id/text_name_MA_2"
+
             />
 
         <EditText
@@ -62,7 +62,7 @@
             android:inputType="textPassword"
             android:hint="i.e. 1234"
             android:ems="10"
-            android:id="@+id/editText_password_MA2"
+            android:id="@+id/ma_etPassword"
             />
     </TableLayout>
     <LinearLayout
