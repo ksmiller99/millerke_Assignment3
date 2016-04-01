@@ -1,0 +1,394 @@
+<resources>
+    <string name="app_name">millerk31 Assignment 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_registration_page">Registration Page</string>
+    <string name="title_activity_landing_screen">Welcome to MSU</string>
+
+    <string name="U4_Username">U4_Username</string>
+    <string name="U4_password">U4_password</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+
+    <!-- copied from MSU website -->
+    <string-array name="major_array">
+        <item>Select your major</item>
+        <item>(AABM) Accounting (M.S.)</item>
+        <item>(AABM) Accounting Major (B.S.)</item>
+        <item>(ACCO) Accounting Post Master\'s Certificate Program</item>
+        <item>(ACCT) Accounting (M.S.)</item>
+        <item>(ACCT) Accounting Major (B.S.)</item>
+        <item>(ACOU) Advanced Counseling Post Master\'s Certificate Program</item>
+        <item>(ADA) Academy of Nutrition and Dietetics Certificate Program</item>
+        <item>(ADAD) Adolescent Advocacy Certificate Program</item>
+        <item>(ADCO) Certified Alcohol and Drug Counselor Certificate</item>
+        <item>(ANBM) Anthropology Major (B.A.)</item>
+        <item>(ANCD) Anthropology Major, Community Development Concentration (B.A.)</item>
+        <item>(ANED) Anthropology Major with Teacher Certification in Social Studies (Preschool-Grade 12) (B.A.)</item>
+        <item>(ANEL) Anthropology Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(ANIL) Animation and Illustration Major (B.F.A.)</item>
+        <item>(ANTH) Anthropology Major (B.A.)</item>
+        <item>(APLN) Applied Linguistics (M.A.)</item>
+        <item>(ARDI) Artist\'s Diploma Certificate Program</item>
+        <item>(ART) Art, Instructional Certification: Teacher Certification in Art (Preschool-Grade 12)</item>
+        <item>(ATTR) Athletic Training Major (B.S.)</item>
+        <item>(AUDI) Audiology Clinical Track (Au.D.)</item>
+        <item>(AUDI) Audiology Research Track (Sc.D.)</item>
+        <item>(BAAC) Business Administration, Accounting Concentration (M.B.A.)</item>
+        <item>(BAEC) Business Administration Major, Economics Concentration (B.S.)</item>
+        <item>(BAFN) Business Administration Major, Finance Concentration (B.S.)</item>
+        <item>(BAFN) Business Administration, Finance Concentration (M.B.A.)</item>
+        <item>(BAHM) Business Administration Major, Hospitality Management Concentration (B.S.)</item>
+        <item>(BAIB) Business Administration Major, International Business Concentration (B.S.)</item>
+        <item>(BAIB) Business Administration, International Business Concentration (M.B.A.)</item>
+        <item>(BAMG) Business Administration Major, Management Concentration (B.S.)</item>
+        <item>(BAMG) Business Administration, Management Concentration (M.B.A.)</item>
+        <item>(BAMI) Business Administration Major, Management Information Systems Concentration (B.S.)</item>
+        <item>(BAMI) Business Administration, Management Information Systems Concentration (M.B.A.)</item>
+        <item>(BAMK) Business Administration Major, Marketing Concentration (B.S.)</item>
+        <item>(BAMK) Business Administration, Marketing Concentration (M.B.A.)</item>
+        <item>(BAOM) Business Administration Major, Operations Management Concentration (B.S.)</item>
+        <item>(BARE) Business Administration Major, Real Estate Concentration (B.S.)</item>
+        <item>(BARM) Business Administration Major, Retail Merchandising and Management Concentration (B.S.)</item>
+        <item>(BASE) Business Administration Major, Sports, Events and Tourism Marketing Concentration (B.S.)</item>
+        <item>(BICM) Biochemistry Major (B.S.)</item>
+        <item>(BIED) Biology with Teacher Certification in Biological Science (Preschool-Grade 12) (B.S.)</item>
+        <item>(BIEE) Biology, Ecology &amp; Evolution Concentration (M.S.)</item>
+        <item>(BIES) Biology Major, Environmental Science Concentration (B.S.)</item>
+        <item>(BIOL) Biology (M.S.)</item>
+        <item>(BIOL) Biology Major (B.S.)</item>
+        <item>(BIPH) Biology, Physiology Concentration (M.S.)</item>
+        <item>(BISC) Biological Science, Instructional Certification: Teacher Certification in Biological Science</item>
+        <item>(BISE) Biology, Biological Science/Education Concentration (M.S.)</item>
+        <item>(BLBM) Biology Major (B.S.)</item>
+        <item>(BSAD) Business Administration (M.B.A.)</item>
+        <item>(CAPW) Child Advocacy and Policy, Public Child Welfare Concentration (M.A.)</item>
+        <item>(CCBM) Chemistry Major (B.S.)</item>
+        <item>(CHAD) Child Advocacy and Policy (M.A.)</item>
+        <item>(CHAD) Child Advocacy and Policy Certificate Program</item>
+        <item>(CHAD) Child Advocacy and Policy Major (B.A.)</item>
+        <item>(CHAU) Child Advocacy and Policy Certificate Program</item>
+        <item>(CHBI) Chemistry, Biochemistry Concentration (M.S.)</item>
+        <item>(CHBM) Chemistry (M.S.)</item>
+        <item>(CHBM) Chemistry Major (B.S.)</item>
+        <item>(CHED) Chemistry Major with Teacher Certification in Chemistry (Preschool-Grade 12) (B.S.)</item>
+        <item>(CHEM) Chemistry (M.S.)</item>
+        <item>(CHEM) Chemistry Major (B.S.)</item>
+        <item>(CHEM) Chemistry, Instructional Certification: Teacher Certification in Chemistry (Preschool-Grade 12)</item>
+        <item>(CHPS) Chemistry Major with Teacher Certification in Physical Science (Preschool-Grade 12) (B.S.)</item>
+        <item>(CLAS) Classics Major (B.A.)</item>
+        <item>(CMGW) Conflict Management in the Workplace Certificate Program</item>
+        <item>(CMLP) Communication Sciences and Disorders, Speech Language Pathology Concentration (M.A.)</item>
+        <item>(CMMA) Communication and Media Arts Major (B.A.)</item>
+        <item>(CMPL) Computational Linguistics Certificate Program</item>
+        <item>(CNAC) Counseling, Addictions Counseling Concentration (M.A.)</item>
+        <item>(CNCC) Counseling, Community Counseling Concentration (M.A.)</item>
+        <item>(CNED) Counselor Education (Ph.D.)</item>
+        <item>(CNSA) Counseling, Student Affairs/Counseling in Higher Ed Concentration (M.A.)</item>
+        <item>(CNSC) Counseling, School Counseling Concentration (M.A.)</item>
+        <item>(CPBM) Computer Science (M.S.)</item>
+        <item>(CPBM) Computer Science Major (B.S.)</item>
+        <item>(CPCP) Clinical Psychology, Child/Adolescent Clinical Psychology Concentration (M.A.)</item>
+        <item>(CPIN) Computer Science Major, Informatics Concentration (B.S.)</item>
+        <item>(CPIT) Computer Science, Information Technology Concentration</item>
+        <item>(CPLT) Clinical Psychology, Latina/o Psychology Concentration (M.A.)</item>
+        <item>(CPPC) Computer Science Major, Professional Computing Concentration (B.S.)</item>
+        <item>(CPSC) Computer Science (M.S.)</item>
+        <item>(CPSC) Computer Science Major (B.S.)</item>
+        <item>(CRFP) Criminal Forensic Psychology Certificate</item>
+        <item>(CSBM) Chemistry Major (B.S.)</item>
+        <item>(CSHC) Communication Studies Major, Health Communication Concentration (B.A.)</item>
+        <item>(CSOC) Communication Studies Major, Organizational Communication Concentration (B.A.)</item>
+        <item>(CSPR) Communication Studies Major, Public Relations Concentration (B.A.)</item>
+        <item>(DAED) Dance Major Education Concentration, with Teacher Certification in Dance (Preschool-Grade 12) (B.A.)</item>
+        <item>(DANC) Dance Major (B.F.A.)</item>
+        <item>(DAST) Dance Major Studio Teaching Concentration (B.A.)</item>
+        <item>(DMAI) Developmental Models of Autism Intervention Certificate Program</item>
+        <item>(DSCS) Director of School Counseling, Educational Services Certification</item>
+        <item>(ECBE) Economics Major, Business Economics Concentration (B.A.)</item>
+        <item>(ECED) Elementary School Teacher, Instructional Certification: Teacher Certification in Elementary School Teacher in Grades K-6</item>
+        <item>(ECEL) Teacher of Pre-School through Grade 3, Instructional Certification: Teacher Certification in Preschool through Grade 3</item>
+        <item>(ECOE) Economics Major with Teacher Certification in Social Studies (Preschool-Grade 12) (B.A.)</item>
+        <item>(ECON) Economics Major (B.A.)</item>
+        <item>(ELAD) Educational Leadership (M.A.)</item>
+        <item>(ENBM) English Major (B.A.)</item>
+        <item>(ENED) English Major with Teacher Certification in English (Preschool-Grade 12) (B.A.)</item>
+        <item>(ENEL) English Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(ENGL) English (M.A.)</item>
+        <item>(ENGL) English Major (B.A.)</item>
+        <item>(ENGL) English, Instructional Certification: Teacher Certification in English (Preschool-Grade 12)</item>
+        <item>(ENVF) Environmental Forensics Certificate Program</item>
+        <item>(ENVM) Environmental Management (Ph.D.)</item>
+        <item>(ERSC) Earth Science, Instructional Certification: Teacher Certification in Earth Science</item>
+        <item>(ESCI) Exercise Science Major (B.S.)</item>
+        <item>(ESED) Environmental Studies, Environmental Education Concentration (M.A.)</item>
+        <item>(ESEM) Environmental Studies, Environmental Management Concentration (M.A.)</item>
+        <item>(ESES) Environmental Studies, Environmental Science Concentration (M.A.)</item>
+        <item><![CDATA[(ESLA) English, Instructional Certification: Teacher Certification in Elementary School with Subject Matter Specialization: Language Arts/Literacy Grades 5–8]]></item>
+        <item><![CDATA[(ESMA) Mathematics, Instructional Certification: Teacher Certification in Elementary School with Subject Matter Specialization: Mathematics Grades 5–8]]></item>
+        <item>(ESPT) Exercise Science and Physical Education, Teaching and Supervision of Physical Education Concentration (M.A.)</item>
+        <item><![CDATA[(ESSC) Science, Instructional Certification: Teacher Certification in Elementary School with Subject Matter Specialization: Science Grades 5–8]]></item>
+        <item>(FAAH) Fine Arts Major, Art History Concentration (B.A.)</item>
+        <item>(FABM) Fine Arts Major, Fine Arts Education Concentration (B.A.)</item>
+        <item>(FAED) Fine Arts Major, Fine Arts Education Concentration with Teacher Certification in Art (Preschool-Grade 12) (B.A.)</item>
+        <item>(FAMM) Fine Arts, Museum Management Concentration (M.A.)</item>
+        <item>(FASC) Fine Arts Major, School and Community Settings Concentration (B.A.)</item>
+        <item>(FASF) Fine Arts/Studio Major (B.F.A.)</item>
+        <item>(FASH) Fashion Studies Major (B.A.)</item>
+        <item>(FAST) Fine Arts Major, Studio Concentration (B.A.)</item>
+        <item>(FAST) Fine Arts, Studio Concentration (M.A.)</item>
+        <item>(FCBM) Family and Child Studies Major, Families, Children and School Settings Concentration (Combined B.A./M.A.T with Teacher Certification in Grades K- 6 and Teacher of Students with Disabilities.)</item>
+        <item>(FCEL) Family and Child Studies Major, Families, Children and School Settings Concentration with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(FCFP) Family/Civil Forensic Psychology Certificate</item>
+        <item>(FCFS) Family and Child Studies Major, Family Services Concentration (B.A.)</item>
+        <item>(FCGR) Family and Child Studies Major, Gerontology Concentration (B.A.)</item>
+        <item>(FCPS) Family and Child Studies Major, Families, Children and School Settings Concentration with Teacher Certification in Elementary School Teacher in Grades P-3 (B.A.)</item>
+        <item>(FCSS) Family and Child Studies Major, Families, Children and School Settings Concentration (B.A.)</item>
+        <item>(FCST) Family and Child Studies (M.A.)</item>
+        <item>(FLMK) Filmmaking Major (B.F.A.)</item>
+        <item>(FMBM) Family and Child Studies Major, Families, Children and School Settings Concentration (Combined B.A./M.A.T with Teacher Certification in Grades P</item>
+        <item>(FMST) Family Studies (Ph.D.)</item>
+        <item>(FRBM) French Major (B.A.)</item>
+        <item>(FRCV) French Major, French Civilization Concentration (B.A.)</item>
+        <item>(FRED) French Major with Teacher Certification in French (Preschool-Grade 12) (B.A.)</item>
+        <item>(FREN) French, Instructional Certification: Teacher Certification in French (Preschool-Grade 12)</item>
+        <item>(FRFS) French, French Studies Concentration (M.A.)</item>
+        <item>(FRLI) French, French Literature Concentration (M.A.)</item>
+        <item>(FRTR) French Major, Translation Concentration (B.A.)</item>
+        <item>(FSIN) Food Safety Instructor Certificate Program</item>
+        <item>(GEEN) Geography Major, Environmental Studies Concentration (B.A.)</item>
+        <item>(GEES) Geoscience Major, Environmental Science/Geoscience Concentration (B.S.)</item>
+        <item>(GEIS) Geographic Information Science Certificate Program</item>
+        <item>(GEOG) Geography Major (B.A.)</item>
+        <item>(GEOS) Geoscience (M.S.)</item>
+        <item>(GEOS) Geoscience Major (B.S.)</item>
+        <item>(GERM) German Major (B.A.)</item>
+        <item>(GEUR) Geography Major, Urban Studies Concentration (B.A.)</item>
+        <item>(GGED) Geography Major with Teacher Certification in Social Studies (Preschool-Grade 12) (B.A.)</item>
+        <item>(GHEL) General Humanities Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(GHUM) General Humanities Major (B.A.)</item>
+        <item>(GOBM) Geoscience Major (B.S.)</item>
+        <item>(GOED) Geoscience Major with Teacher Certification in Earth Science (Preschool-Grade 12) (B.S.)</item>
+        <item>(GRDN) Graphic Design Major (B.F.A.)</item>
+        <item>(HIED) History Major with Teacher Certification in Social Studies (Preschool-Grade 12) (B.A.)</item>
+        <item>(HIEL) History Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(HIST) History (M.A.)</item>
+        <item>(HIST) History Major (B.A.)</item>
+        <item>(HLED) Health Education, Instructional Certification: Teacher Certification in Health Education</item>
+        <item>(HLPE) Health and Physical Education, Instructional Certification: Teacher Certification in Health and Physical Education (Preschool-Grade 12)</item>
+        <item>(HLPH) Health Education Major, Public Health Concentration (B.S.)</item>
+        <item>(ICMH) Infant and Early Childhood Mental Health Certificate</item>
+        <item>(IEAU) Inclusive Education, Early Childhood (P-3)Teachers/ Autism/Teacher of Students with Disabilities Concentration (M.Ed.)</item>
+        <item>(IEEC) Inclusive Education, Early Childhood (P-3)Teachers/Teacher of Students with Disabilities Concentration (M.Ed.)</item>
+        <item>(IEEL) Inclusive Education, Elementary Education (K-6) Teachers/Teacher of Students with Disabilities Concentration (M.Ed.)</item>
+        <item>(INDS) Industrial Design Major (B.F.A.)</item>
+        <item>(INFT) Information Technology Major (B.S.)</item>
+        <item>(IOPS) Industrial and Organizational Psychology (M.A.)</item>
+        <item>(ITAL) Italian Major (B.A.)</item>
+        <item>(ITAL) Italian, Instructional Certification: Teacher Certification in Italian (Preschool-Grade 12)</item>
+        <item>(ITTE) Italian Major with Teacher Certification in Italian (Preschool-Grade 12) (B.A.)</item>
+        <item>(JUIN) Justice Studies Major International Justice Concentration (B.A.)</item>
+        <item>(JUJS) Justice Studies Major, Justice Systems Concentration (B.A.)</item>
+        <item>(JUPS) Justice Studies Major, Paralegal Studies Concentration (B.A.)</item>
+        <item>(JURI) Jurisprudence Major (B.A.)</item>
+        <item>(LATE) Latin Major with Teacher Certification in Latin (Preschool-Grade 12) (B.A.)</item>
+        <item>(LATN) Latin Major (B.A.)</item>
+        <item>(LATN) Latin, Instructional Certification: Teacher Certification in Latin (Preschool-Grade 12)</item>
+        <item>(LAWC) Law and Governance, Governance, Compliance, and Regulation Concentration (M.A.)</item>
+        <item>(LAWG) Law and Governance (M.A.)</item>
+        <item>(LAWI) Law and Governance, Intellectual Property Concentration (M.A.)</item>
+        <item>(LAWM) Law and Governance, Legal Management Concentration (M.A.)</item>
+        <item>(LAWP) Law and Governance, Conflict Management and Peace Studies Concentration (M.A.)</item>
+        <item>(LDTC) Learning Disabilities Teacher-Consultant, Educational Services Certification</item>
+        <item>(LIBM) Linguistics Major (B.A.)</item>
+        <item>(LIED) Linguistics Major with Teacher Certification in English as a Second Language (Preschool-Grade 12) (B.A.)</item>
+        <item>(LING) Linguistics Major (B.A.)</item>
+        <item>(LRDI) Learning Disabilities (M.Ed.)</item>
+        <item>(MABM) Mathematics Major (B.S.)</item>
+        <item>(MADA) Mathematics Major, Discrete Applied Mathematics Concentration (B.S.)</item>
+        <item>(MAED) Mathematics, Mathematics Education Concentration (M.S.)</item>
+        <item>(MAFI) Mathematics Major, Mathematics of Finance Concentration (B.S.)</item>
+        <item>(MAPM) Mathematics, Pure &amp; Applied Mathematics Concentration (M.S.)</item>
+        <item>(MATH) Mathematics Major (B.S.)</item>
+        <item>(MATH) Mathematics, Instructional Certification: Teacher Certification in Mathematics (Preschool-Grade 12)</item>
+        <item>(MBBM) Marine Biology and Coastal Sciences (M.S.)</item>
+        <item>(MBBM) Marine Biology and Coastal Sciences Major (B.S.)</item>
+        <item>(MBCS) Marine Biology and Coastal Sciences (M.S.)</item>
+        <item>(MBCS) Marine Biology and Coastal Sciences Major (B.S.)</item>
+        <item>(MGBM) Music Major (Guitar Primary) B.Mus.</item>
+        <item>(MIBM) Music Major (Instrumental Primary) B.Mus.</item>
+        <item>(MKBM) Music Major (Keyboard Primary) B.Mus.</item>
+        <item>(MOBI) Molecular Biology (M.S.)</item>
+        <item>(MOBI) Molecular Biology Certificate</item>
+        <item>(MOBI) Molecular Biology Major (B.S.)</item>
+        <item>(MSCB) Mathematics Major, Statistics Concentration (B.S.)</item>
+        <item>(MSTA) Mathematics Major, Statistics Concentration (B.S.)</item>
+        <item>(MTED) Mathematics Major, with Teacher Certification in Mathematics (Preschool-Grade 12) (B.S.)</item>
+        <item>(MTGU) Music Therapy Major (Guitar Primary) (B.A.)</item>
+        <item>(MTHC) Music Therapy Certificate Program</item>
+        <item>(MTHE) Mathematics Education (Ed.D.)</item>
+        <item>(MTKB) Music Therapy Major (Keyboard Primary) (B.A.)</item>
+        <item>(MTSB) Music Therapy Major (Strings, Brass, Woodwind and Percussion Primary) (B.A.)</item>
+        <item>(MTVO) Music Therapy Major (Voice Primary) (B.A.)</item>
+        <item>(MUAR) Makeup Artistry Certificate Program</item>
+        <item>(MUEG) Music Major, Music Education Concentration (Guitar Primary) with Teacher Certification in Music (Preschool-Grade 12) (B.Mus.)</item>
+        <item>(MUEI) Music Major, Music Education Concentration (Instrumental Primary) with Teacher Certification in Music (Preschool-Grade 12) (B.Mus.)</item>
+        <item>(MUEK) Music Major, Music Education Concentration (Keyboard Primary) with Teacher Certification in Music (Preschool-Grade12) (B.Mus.)</item>
+        <item>(MUEV) Music Major, Music Education Concentration (Voice Primary) with Teacher Certification in Music (Preschool-Grade 12) (B.Mus.)</item>
+        <item>(MUIN) Music Major, Performance Concentration (Instrumental Primary) (B.Mus.)</item>
+        <item>(MUJZ) Music Major, Jazz Studies Concentration (B.Mus.)</item>
+        <item>(MUKB) Music Major, Performance Concentration (Keyboard Primary) (B.Mus.)</item>
+        <item>(MUMT) Music, Music Therapy Concentration (M.A.)</item>
+        <item>(MUPF) Music, Performance Concentration (M.A.)</item>
+        <item>(MUSC) Music, Instructional Certification: Teacher Certification in Music (Preschool-Grade 12)</item>
+        <item>(MUSG) Music Major, School and Community Settings Concentration (Guitar Primary) (B.Mus.)</item>
+        <item>(MUSI) Music Major, School and Community Settings Concentration (Instrumental Primary) (B.Mus.)</item>
+        <item>(MUSK) Music Major, School and Community Settings Concentration (Keyboard Primary) (B.Mus.)</item>
+        <item>(MUSV) Music Major, School and Community Settings Concentration (Voice Primary) (B.Mus.)</item>
+        <item>(MUTC) Music Major, Theory Composition Concentration (B.Mus.)</item>
+        <item>(MUTC) Music, Theory Composition Concentration (M.A.)</item>
+        <item>(MUTR) Musical Theatre Major (B.F.A.)</item>
+        <item>(MUVO) Music Major, Performance Concentration (Voice Primary) (B.Mus.)</item>
+        <item>(MVBM) Music Major (Voice Primary) B.Mus.</item>
+        <item>(NLDL) New Literacies, Digital Technologies and Learning Certificate Program</item>
+        <item>(NUES) Nutrition and Exercise Science Certificate Program</item>
+        <item>(NUFD) Nutrition and Food Science Major, Dietetics Concentration (B.S.)</item>
+        <item>(NUFG) Nutrition and Food Science Major, General Concentration (B.S.)</item>
+        <item>(NUFS) Nutrition and Food Science (M.S.)</item>
+        <item>(NUSY) Nutrition and Food Science Major, Food Systems Concentration (B.S.)</item>
+        <item>(PALG) Paralegal Studies Certificate Program</item>
+        <item>(PEBM) Physical Education Major (B.S.)</item>
+        <item>(PEDU) Physical Education, Instructional Certification: Teacher Certification in Physical Education (Preschool-Grade 12)</item>
+        <item>(PERC) Performer\'s Certificate Program</item>
+        <item>(PHAE) Physical Education Major, Physical Activity in Educational Settings Concentration (B.S.)</item>
+        <item>(PHAS) Physics Major, Astronomy Concentration (B.S.)</item>
+        <item>(PHBC) Pharmaceutical Biochemistry (M.S.)</item>
+        <item>(PHBM) Philosophy Major (B.A.)</item>
+        <item>(PHCF) Physical Education Major, Community Based Fitness and Wellness Concentration (B.S.)</item>
+        <item>(PHCH) Public Health Major, Community Health Education Concentration (B.S.)</item>
+        <item>(PHCO) Physical Education Major, Coaching Concentration (B.S.)</item>
+        <item>(PHED) Physical Education Major with Teacher Certification in Health and Physical Education (Preschool-Grade 12) (B.S.)</item>
+        <item>(PHEL) Philosophy Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(PHIL) Philosophy Major (B.A.)</item>
+        <item>(PHPS) Physics Major, with Teacher Certification in Physical Science (Preschool-Grade 12) (B.S.)</item>
+        <item>(PHSC) Physical Science, Instructional Certification: Teacher Certification in Physical Science (Preschool-Grade 12)</item>
+        <item>(PHYE) Physics Major, with Teacher Certification in Physics (Preschool-Grade 12) (B.S.)</item>
+        <item>(PHYS) Physics Major (B.S.)</item>
+        <item>(POED) Political Science Major with Teacher Certification in Social Studies (Preschool-Grade 12) (B.A.)</item>
+        <item>(POLS) Political Science Major (B.A.)</item>
+        <item>(PORE) Public &amp; Organizational Relations (M.A.)</item>
+        <item>(PRIN) Principal, Administrative Services Certification</item>
+        <item>(PSBM) Psychology Major (B.A.)</item>
+        <item>(PSED) Psychology Major with Teacher Certification in Social Studies (Preschool-Grade 12) (B.A.)</item>
+        <item>(PSEL) Psychology Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(PSYC) Psychology (M.A.)</item>
+        <item>(PSYC) Psychology Major (B.A.)</item>
+        <item>(PUBC) Public Health, Community Health Education Concentration (M.P.H.)</item>
+        <item>(PYBM) Psychology (M.A.)</item>
+        <item>(PYBM) Psychology Major (B.A.)</item>
+        <item>(RDSP) Reading Specialist, Educational Services Certification</item>
+        <item>(READ) Reading (M.A.)</item>
+        <item>(REBM) Religious Studies Major (B.A.)</item>
+        <item>(REEL) Religious Studies Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(RELS) Religious Studies Major (B.A.)</item>
+        <item>(SAC) Substance Awareness Coordinator, Educational Services Certification</item>
+        <item>(SCCO) School Counselor, Post Master\'s Educational Services Certification</item>
+        <item>(SIBC) Science Informatics Major, Biochemistry Concentration (B.S.)</item>
+        <item>(SICS) Science Informatics Major, Computer Science Concentration (B.S.)</item>
+        <item>(SIMB) Science Informatics Major, Molecular Biology Concentration (B.S.)</item>
+        <item>(SKBM) Spanish Major (B.A.)</item>
+        <item>(SNBM) Spanish (M.A.)</item>
+        <item>(SNBM) Spanish Major (B.A.)</item>
+        <item>(SOBM) Sociology Major (B.A.)</item>
+        <item>(SOCI) Sociology Major (B.A.)</item>
+        <item>(SOED) Sociology Major with Teacher Certification in Social Studies (Preschool-Grade 12) (B.A.)</item>
+        <item>(SOEL) Sociology Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(SOST) Social Studies, Instructional Certification: Teacher Certification in Social Studies</item>
+        <item>(SPAN) Spanish (M.A.)</item>
+        <item>(SPAN) Spanish Major (B.A.)</item>
+        <item>(SPAN) Spanish, Instructional Certification: Teacher Certification in Spanish (Preschool-Grade 12)</item>
+        <item>(SPBM) Spanish Major (B.A.)</item>
+        <item>(SPCE) Special Education (M.Ed.)</item>
+        <item>(SPEL) Spanish Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(SPSY) School Psychologist, Educational Services Certification</item>
+        <item>(SPTE) Spanish Major with Teacher Certification in Spanish (Preschool-Grade 12) (B.A.)</item>
+        <item>(SPTL) Spanish Translation Certificate Program</item>
+        <item>(SPTR) Spanish Major, Translation Concentration (B.A.)</item>
+        <item>(SSBM) Sustainability Science (M.S.)</item>
+        <item>(SSBM) Sustainability Science Major (B.S.)</item>
+        <item>(SSCI) Sustainability Science (M.S.)</item>
+        <item>(SSCI) Sustainability Science Major (B.S.)</item>
+        <item>(STAR) Studio Art (M.F.A.)</item>
+        <item>(STAT) Statistics (M.S.)</item>
+        <item>(STCB) Statistics (M.S.)</item>
+        <item>(SUPR) Supervisor, Administrative Services Certification</item>
+        <item>(TBIO) Teaching, with Teacher Certification in Biological Science (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TCHM) Teaching, with Teacher Certification in Chemistry (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TDAS) Television and Digital Media Major, Audio/Sound Design Concentration (B.A.)</item>
+        <item>(TDDM) Television and Digital Media Major, Documentary Concentration (B.A.)</item>
+        <item>(TDEC) Teacher of Students with Disabilities (Inclusive Education for Pre-School through Grade 3 Teachers), Instructional Certification: Teacher Certification in Students with Disabilities (Preschool-Grade 12)</item>
+        <item>(TDEJ) Television and Digital Media Major, Electronic Journalism Concentration (B.A.)</item>
+        <item>(TDEL) Teacher of Students with Disabilities (Inclusive Education for Grades K-6 Teachers), Instructional Certification: Teacher Certification in Students with Disabilities (Preschool-Grade 12)</item>
+        <item>(TDSA) Teacher of Students with Disabilities (Inclusive Education for Subject Area Teachers), Instructional Certification: Teacher Certification in Students with Disabilities (Preschool-Grade 12)</item>
+        <item>(TDSM) Television and Digital Media Major, Sports Media and Journalism Concentration (B.A.)</item>
+        <item>(TDTP) Television and Digital Media Major, Television Production Concentration (B.A.)</item>
+        <item>(TEAR) Teaching, with Teacher Certification in Art (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEBI) Teaching, with Teacher Certification in Biological Science (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TECD) Teaching, with Teacher Certifications in Preschool through Grade 3 and Students with Disabilities (Preschool</item>
+        <item>(TECH) Teaching, with Teacher Certification in Chemistry (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEEC) Teaching, with Teacher Certification in Preschool through Grade 3 (M.A.T.)</item>
+        <item>(TEEL) Teaching, with Teacher Certification in Elementary School Teacher in Grades K-6 (M.A.T.)</item>
+        <item>(TEEN) Teaching, with Teacher Certification in English (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEES) Teaching, with Teacher Certification in Earth Science (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEFR) Teaching, with Teacher Certification in French (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEHL) Teaching, with Teacher Certification in Health Education (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEHP) Teaching, with Teacher Certification in Health and Physical Education (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TELD) Teaching, with Teacher Certifications in Elementary School Teacher in Grades K-6 and Students with Disabilities (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEMA) Teaching, with Teacher Certification in Mathematics (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEMU) Teaching, with Teacher Certification in Music (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TENG) Teaching, with Teacher Certification in English (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TENS) Teaching, with Teacher Certification in English as a Second Language (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TEPE) Teaching, with Teacher Certification in Physical Education (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TEPS) Teaching, with Teacher Certification in Physical Science (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TERS) Teaching, with Teacher Certification in Earth Science (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TESL) Teaching English as a Second Language, Instructional Certification: Teacher Certification in English as a Second Language (Preschool-Grade 12)</item>
+        <item>(TESO) Teaching English to Speakers of Other Languages Certificate Program</item>
+        <item>(TESP) Teaching, with Teacher Certification in Spanish (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TESS) Teaching, with Teacher Certification in Social Studies (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TETD) Teacher Education and Teacher Development (Ed.D.)</item>
+        <item>(TETL) Teaching, with Teacher Certification in English as a Second Language (Preschool-Grade 12) (M.A.T.)</item>
+        <item>(TETR) Teaching (Urban Teacher Residency) Science/Mathematics (M.A.T.)</item>
+        <item>(TEUR) Teaching (Urban Teacher Residency, Preschool through Grade 3, Grades K-6, Teacher of Students with Disabilities) (M.A.T.)</item>
+        <item>(TFNA) Teaching, with Teacher Certification in Art (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TFRN) Teaching, with Teacher Certification in French (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(THAC) Theatre Major, Acting Concentration (B.F.A.)</item>
+        <item>(THLT) Teaching, with Teacher Certification in Health Education (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(THPD) Theatre Major, Production/Design Concentration (B.F.A.)</item>
+        <item>(THST) Theatre Studies Major (B.A.)</item>
+        <item>(THTS) Theatre, Theatre Studies Concentration (M.A.)</item>
+        <item>(TKBM) Teaching, with Teacher Certification in Grade K-6 and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TMGM) Teaching Middle Grades Mathematics (M.A.)</item>
+        <item>(TMGM) Teaching Middle Grades Mathematics Certificate Program</item>
+        <item>(TMTH) Teaching, with Teacher Certification in Mathematics (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TMUS) Teaching, with Teacher Certification in Music (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TPED) Teaching, with Teacher Certification in Physical Education (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TPHH) Teaching, with Teacher Certification in Health and Physical Education (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TPYS) Teaching, with Teacher Certification in Physical Science (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TPYS) Teaching, with Teacher Certification in Physical Science (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TSBM) Teaching, with Teacher Certification in Spanish (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TSOS) Teaching, with Teacher Certification in Social Studies (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TSPG) Translation and Interpreting in Spanish Certificate Program</item>
+        <item>(TSPN) Teaching, with Teacher Certification in Spanish (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TUBM) Teaching, with Teacher Certification in Music (Preschool</item>
+        <item>(TWRI) Teaching Writing Certificate Program</item>
+        <item>(TYBM) Teaching, with Teacher Certification in Health and Physical Education (Preschool-Grade 12) and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(TZBM) Teaching, with Teacher Certification in Preschool through Grade 3 and Teacher of Students with Disabilities (M.A.T.)</item>
+        <item>(WMBM) Women\'s and Gender Studies Major (B.A.)</item>
+        <item>(WMEL) Women\'s and Gender Studies Major with Teacher Certification in Elementary School Teacher in Grades K-6 (B.A.)</item>
+        <item>(WMGS) Women\'s and Gender Studies Major (B.A.)</item>
+        <item>(WRMA) Water Resource Management Certificate Program</item>
+    </string-array>
+    <string name="title_activity_browsing_history">BrowsingHistoryActivity</string>
+    <string name="title_activity_show_password">ShowPasswordActivity</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_edit_account">EditAccount</string>
+
+</resources>
