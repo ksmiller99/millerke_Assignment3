@@ -1,8 +1,10 @@
 package com.kevin_miller.csit551.assignment3;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -67,6 +69,11 @@ public class MainActivity extends AppCompatActivity {
                         //log activity
                         String data = DateFormat.getDateTimeInstance().format(new Date()) + " Login\n";
 
+                        SharedPreferences sharedpreferences = getSharedPreferences(app.getUsername(), Context.MODE_APPEND);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putString("history", sharedpreferences.getString("history", "") + data);
+                        editor.commit();
+
                         FileOutputStream fOut = null;
                         try {
                             fOut = openFileOutput(app.getUsername(), MODE_APPEND);
@@ -113,7 +120,12 @@ public class MainActivity extends AppCompatActivity {
         if (!app.getUsername().toString().isEmpty()) {
             //log activity
             String data = DateFormat.getDateTimeInstance().format(new Date()) + " " + this.getClass().getSimpleName() + "\n";
-            ;
+
+            SharedPreferences sharedpreferences = getSharedPreferences(app.getUsername(), Context.MODE_APPEND);
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putString("history", sharedpreferences.getString("history", "") + data);
+            editor.commit();
+
 
             FileOutputStream fOut = null;
             try {

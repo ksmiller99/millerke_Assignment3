@@ -2,8 +2,10 @@ package com.kevin_miller.csit551.assignment3;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -365,7 +367,12 @@ public class EditAccount extends AppCompatActivity implements AdapterView.OnItem
         if (!app.getUsername().toString().isEmpty()) {
             //log activity
             String data = DateFormat.getDateTimeInstance().format(new Date()) + " " + this.getClass().getSimpleName() + "\n";
-            ;
+
+            SharedPreferences sharedpreferences = getSharedPreferences(app.getUsername(), Context.MODE_APPEND);
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putString("history", sharedpreferences.getString("history", "") + data);
+            editor.commit();
+
 
             FileOutputStream fOut = null;
             try {

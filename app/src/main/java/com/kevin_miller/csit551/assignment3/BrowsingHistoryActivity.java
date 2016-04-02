@@ -1,13 +1,17 @@
 package com.kevin_miller.csit551.assignment3;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import java.io.File;
@@ -30,14 +34,24 @@ public class BrowsingHistoryActivity extends AppCompatActivity {
         app = (MyApplication) getApplication();
         tvHistory = (TextView) findViewById(R.id.bh_tvHistory);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences userDetails = getApplicationContext().getSharedPreferences(app.getUsername(), MODE_PRIVATE);
+                String history = userDetails.getString("history", "");
+                AlertDialog alertDialog = new AlertDialog.Builder(BrowsingHistoryActivity.this).create();
+                alertDialog.setTitle("History");
+                alertDialog.setMessage("I originally did the history via files by mistake. This is the history via Shared Preferences:\n\n" + history);
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
 
         try {
             FileInputStream fin = openFileInput(app.getUsername());
@@ -144,7 +158,11 @@ public class BrowsingHistoryActivity extends AppCompatActivity {
         if (!app.getUsername().toString().isEmpty()) {
             //log activity
             String data = DateFormat.getDateTimeInstance().format(new Date()) + " " + this.getClass().getSimpleName() + "\n";
-            ;
+
+            SharedPreferences sharedpreferences = getSharedPreferences(app.getUsername(), Context.MODE_APPEND);
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putString("history", sharedpreferences.getString("history", "") + data);
+            editor.commit();
 
             FileOutputStream fOut = null;
             try {
