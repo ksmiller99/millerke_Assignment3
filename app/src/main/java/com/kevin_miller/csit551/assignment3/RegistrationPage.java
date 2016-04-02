@@ -221,7 +221,7 @@ public class RegistrationPage extends AppCompatActivity implements AdapterView.O
                     if (isInserted) {
                         Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
                         //log activity
-                        String data = DateFormat.getDateTimeInstance().format(new Date()) + " Account created";
+                        String data = DateFormat.getDateTimeInstance().format(new Date()) + " Account created\n";
 
                         FileOutputStream fOut = null;
                         try {

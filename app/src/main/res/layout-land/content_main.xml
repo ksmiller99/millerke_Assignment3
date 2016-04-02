@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="WELCOME TO MSU"
+            android:id="@+id/textView"
+            android:typeface="monospace"
+            android:layout_gravity="center"
+            android:fontFamily="@string/abc_capital_on"
+            android:textColor="#009900" />
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Username: "
+
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Enter your username"
+            android:ems="10"
+            android:id="@+id/ma_etUserName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Password: "
+
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="i.e. 1234"
+            android:ems="10"
+            android:id="@+id/ma_etPassword" />
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ma_btnLogIn"
+            android:layout_weight="1"
+            android:textSize="10dp"
+            android:text="Log In"
+            android:backgroundTint="#0FFF" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ma_btnForgotPasword"
+            android:layout_weight="1"
+            android:textSize="10dp"
+            android:text="Forgot Password"
+            android:backgroundTint="#0FFF" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ma_btnRegister"
+            android:layout_weight="1"
+            android:textSize="10dp"
+            android:text="Register"
+            android:backgroundTint="#0FFF" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_background"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:id="@+id/reg_etUserName"
+            android:hint="Enter a username"
+            android:inputType="text"
+            android:digits="0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:id="@+id/reg_etFullName"
+            android:hint="Enter your name"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:id="@+id/reg_etDOB"
+            android:hint="Enter your date of birth"
+            android:layout_gravity="center_horizontal"
+            android:focusable="false"
+            android:inputType="date" />
+
+        <Spinner
+            android:id="@+id/reg_spnMajor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:spinnerMode="dialog"
+            android:layout_height="wrap_content"
+            android:entries="@array/major_array"></Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:id="@+id/reg_etEmail"
+            android:hint="Enter your MSU email"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:id="@+id/reg_etPass1"
+            android:hint="Enter your password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:id="@+id/reg_etPass2"
+            android:hint="Confirm  password"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reg_btnRegister"
+        android:text="Register"
+        android:backgroundTint="#0FFF" />
+
+</LinearLayout>
