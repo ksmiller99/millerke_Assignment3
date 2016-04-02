@@ -37,14 +37,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
-    public boolean updateData(String id, String username, String major, String email, String password){
+    public boolean updateData(
+            String id,
+            String username,
+            String fullname,
+            String dob,
+            String major,
+            String email,
+            String password) {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(FeedEntry.COL_USERNAME,username);
+        contentValues.put(FeedEntry.COL_FULLNAME, fullname);
+        contentValues.put(FeedEntry.COL_DOB, dob);
         contentValues.put(FeedEntry.COL_MAJOR,major);
         contentValues.put(FeedEntry.COL_EMAIL,email);
         contentValues.put(FeedEntry.COL_PASS,password);
-        long result = db.update(FeedEntry.TABLE_NAME, contentValues, "ID=?", new String[]{id});
+        long result = db.update(FeedEntry.TABLE_NAME, contentValues, "entryid=?", new String[]{id});
         return result != -1;
     }
 

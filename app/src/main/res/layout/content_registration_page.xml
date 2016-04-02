@@ -19,7 +19,8 @@
         android:layout_marginBottom="5sp"
         android:id="@+id/reg_etUserName"
         android:hint="Enter a username"
-        android:inputType="text" />
+        android:inputType="text"
+        android:digits="0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z" />
 
     <EditText
         android:layout_width="fill_parent"

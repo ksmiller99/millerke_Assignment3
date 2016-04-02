@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:fontFamily="@string/abc_capital_on"
-        android:text="Edit Account"
+        android:text="Account Information"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#009900"
         android:typeface="monospace" />
@@ -28,70 +28,82 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
-        android:text="Username: "
-        android:id="@+id/edt_etUserName"/>
+        android:text="Username: " />
 
-    <EditText
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
-        android:id="@+id/edt_etFullName"
-        android:hint="Enter your name"
-        android:inputType="textPersonName" />
+        android:id="@+id/ls_tvUsername"
+        android:textStyle="bold" />
 
     <Space
         android:layout_width="fill_parent"
         android:layout_height="10dp" />
 
-    <EditText
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:text="Full Name: " />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:id="@+id/ls_tvFullName"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:text="Date of Birth: " />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5sp"
-        android:id="@+id/edt_etDOB"
-        android:hint="Enter your date of birth"
-        android:layout_gravity="center_horizontal"
-        android:focusable="false"
-        android:inputType="date" />
+        android:id="@+id/ls_tvDOB"
+        android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/edt_spnMajor"
-        android:layout_width="fill_parent"
-        android:spinnerMode="dialog"
-        android:layout_height="wrap_content"
-        android:entries="@array/major_array"
-        >
-    </Spinner>
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5sp"
-        android:id="@+id/edt_etEmail"
-        android:hint="Enter your MSU email"
-        android:inputType="textEmailAddress" />
     <Space
         android:layout_width="fill_parent"
         android:layout_height="10dp" />
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5sp"
-        android:id="@+id/edt_etPass1"
-        android:hint="Enter your password"
-        android:inputType="textPassword" />
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5sp"
-        android:id="@+id/edt_etPass2"
-        android:hint="Confirm  password"
-        android:inputType="textPassword" />
 
-    <Button
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edt_btnRegister"
-        android:text="Register"
-        android:backgroundTint="#0FFF"/>
+        android:layout_marginBottom="5sp"
+        android:text="Email Address: " />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:id="@+id/ls_tvEmail"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:text="Major: " />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:id="@+id/ls_tvMajor"
+        android:textStyle="bold" />
+
 
 </LinearLayout>

@@ -29,8 +29,6 @@ public class RegistrationPage extends AppCompatActivity implements AdapterView.O
 
     private DatabaseHelper myDB;
 
-    //    SharedPreferences sharedPreferences;
-//    SharedPreferences.Editor editor;
     final Calendar myCalendar = Calendar.getInstance();
     OnDateSetListener dateListener;
     Boolean firstTime = true;
@@ -48,14 +46,11 @@ public class RegistrationPage extends AppCompatActivity implements AdapterView.O
 
         myDB = new DatabaseHelper(this);
 
-//        sharedPreferences = getSharedPreferences("U4_Data", Context.MODE_PRIVATE);
-//        editor = sharedPreferences.edit();
-
-        Button btnRegister = (Button) findViewById(R.id.reg_btnRegister);
+        final Button btnRegister = (Button) findViewById(R.id.reg_btnRegister);
         final EditText etUserName = (EditText) findViewById(R.id.reg_etUserName);
         final EditText etFullName = (EditText) findViewById(R.id.reg_etFullName);
-        final EditText etPassword1 = (EditText) findViewById(R.id.reg_etPass1);
         final EditText etDOB = (EditText) findViewById(R.id.reg_etDOB);
+        final EditText etPassword1 = (EditText) findViewById(R.id.reg_etPass1);
         final EditText etPassword2 = (EditText) findViewById(R.id.reg_etPass2);
         final EditText etEmail = (EditText) findViewById(R.id.reg_etEmail);
         final Spinner spnMajor = (Spinner) findViewById(R.id.reg_spnMajor);

@@ -6,6 +6,7 @@ import android.app.Application;
  * Created by Kevin on 4/1/2016.
  */
 public class MyApplication extends Application {
+    private int primaryKey = -1;
     private String username = "";
     private String fullname = "";
     private String dob = "";
@@ -22,6 +23,14 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         singleton = this;
+    }
+
+    public int getPrimaryKey() {
+        return primaryKey;
+    }
+
+    public void setPrimaryKey(int primaryKey) {
+        this.primaryKey = primaryKey;
     }
 
     public void setUsername(String username) {

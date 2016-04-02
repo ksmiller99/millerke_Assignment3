@@ -14,6 +14,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.FileOutputStream;
+import java.text.DateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     private DatabaseHelper myDB;
@@ -53,11 +57,25 @@ public class MainActivity extends AppCompatActivity {
                     Cursor cursor = myDB.login(username, password);
                     if ((cursor != null) && (cursor.getCount() != 0)) {
                         cursor.moveToFirst();
+                        app.setPrimaryKey(cursor.getInt(0));
                         app.setUsername(cursor.getString(1));
                         app.setFullname(cursor.getString(2));
                         app.setDob(cursor.getString(3));
                         app.setMajor(cursor.getString(4));
                         app.setEmail(cursor.getString(5));
+
+                        //log activity
+                        String data = DateFormat.getDateTimeInstance().format(new Date()) + " login";
+
+                        FileOutputStream fOut = null;
+                        try {
+                            fOut = openFileOutput(app.getUsername(), MODE_APPEND);
+                            fOut.write(data.getBytes());
+                            fOut.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         Intent intent = new Intent(MainActivity.this, LandingScreen.class);
                         startActivity(intent);
                     } else {
@@ -77,16 +95,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-//        //go to landing page after inputting username and password without validating
-//        etPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-//                Intent intent = new Intent(MainActivity.this, LandingScreen.class);
-//                startActivity(intent);
-//                return false;
-//            }
-//        });
 
         btnForgotPassword.setOnClickListener(new View.OnClickListener() {
 
@@ -112,8 +120,6 @@ public class MainActivity extends AppCompatActivity {
         MenuItem history = menu.findItem(R.id.action_history);
         MenuItem notes = menu.findItem(R.id.action_notes);
 
-//        MyApplication app = (MyApplication) getApplication();
-
         if (app.getUsername().isEmpty()){
             // disabled
             account.setEnabled(false); account.getIcon().setAlpha(100);
@@ -136,11 +142,6 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
 
         if (id==R.id.action_help){
             AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
