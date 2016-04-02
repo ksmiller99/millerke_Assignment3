@@ -8,9 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.util.Date;
@@ -31,6 +35,37 @@ public class NotesActivity extends AppCompatActivity {
         app = (MyApplication) getApplication();
         etNotes = (EditText) findViewById(R.id.nt_etNotes);
         btnSave = (Button) findViewById(R.id.nt_btnSave);
+
+        //load previous notes
+        try {
+            FileInputStream fin = openFileInput(app.getUsername() + "_notes");
+            File file = new File(NotesActivity.this.getFilesDir(), app.getUsername() + "_notes");
+
+            int c;
+            String temp = "";
+
+            while ((c = fin.read()) != -1) {
+                temp = temp + Character.toString((char) c);
+            }
+            etNotes.setText(temp);
+
+        } catch (Exception e) {
+        }
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FileOutputStream fOut = null;
+                try {
+                    fOut = openFileOutput(app.getUsername() + "_notes", MODE_PRIVATE);
+                    fOut.write(etNotes.getText().toString().getBytes());
+                    fOut.close();
+                    Toast.makeText(getApplicationContext(), "Notes Saved", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -94,6 +129,7 @@ public class NotesActivity extends AppCompatActivity {
             history.setEnabled(true);
             history.getIcon().setAlpha(255);
             home.setEnabled(true);
+            home.getIcon().setAlpha(255);
         }
 
 
