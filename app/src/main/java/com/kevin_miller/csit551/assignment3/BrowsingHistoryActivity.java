@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -129,7 +128,8 @@ public class BrowsingHistoryActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_notes:
-                Toast.makeText(getApplicationContext(), "Notes is not implemented yet", Toast.LENGTH_SHORT).show();
+                Intent nIntent = new Intent(BrowsingHistoryActivity.this, NotesActivity.class);
+                startActivity(nIntent);
                 break;
 
             default:

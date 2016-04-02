@@ -460,7 +460,8 @@ public class EditAccount extends AppCompatActivity implements AdapterView.OnItem
                 break;
 
             case R.id.action_notes:
-                Toast.makeText(getApplicationContext(), "Notes is not implemented yet", Toast.LENGTH_SHORT).show();
+                Intent nIntent = new Intent(EditAccount.this, NotesActivity.class);
+                startActivity(nIntent);
                 break;
 
             case R.id.action_home:

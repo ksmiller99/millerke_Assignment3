@@ -517,7 +517,8 @@ public class RegistrationPage extends AppCompatActivity implements AdapterView.O
                 break;
 
             case R.id.action_notes:
-                Toast.makeText(getApplicationContext(), "Notes is not implemented yet", Toast.LENGTH_SHORT).show();
+                Intent nIntent = new Intent(RegistrationPage.this, NotesActivity.class);
+                startActivity(nIntent);
                 break;
 
             case R.id.action_home:

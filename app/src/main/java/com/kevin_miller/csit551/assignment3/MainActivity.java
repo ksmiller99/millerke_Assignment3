@@ -193,7 +193,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_notes:
-                Toast.makeText(getApplicationContext(), "Notes is not implemented yet", Toast.LENGTH_SHORT).show();
+                Intent nIntent = new Intent(MainActivity.this, NotesActivity.class);
+                startActivity(nIntent);
                 break;
 
             case R.id.action_home:

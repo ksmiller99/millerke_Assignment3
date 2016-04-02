@@ -390,5 +390,6 @@
     <string name="title_activity_show_password">ShowPasswordActivity</string>
     <string name="title_activity_main_menu">MainMenu</string>
     <string name="title_activity_edit_account">EditAccount</string>
+    <string name="title_activity_notes">NotesActivity</string>
 
 </resources>

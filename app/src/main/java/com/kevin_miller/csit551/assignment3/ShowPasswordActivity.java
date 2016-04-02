@@ -11,7 +11,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.FileOutputStream;
 import java.text.DateFormat;
@@ -150,7 +149,8 @@ public class ShowPasswordActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_notes:
-                Toast.makeText(getApplicationContext(), "Notes is not implemented yet", Toast.LENGTH_SHORT).show();
+                Intent nIntent = new Intent(ShowPasswordActivity.this, NotesActivity.class);
+                startActivity(nIntent);
                 break;
 
             case R.id.action_home:
