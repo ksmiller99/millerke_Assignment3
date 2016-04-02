@@ -11,6 +11,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileOutputStream;
+import java.text.DateFormat;
+import java.util.Date;
+
 public class LandingScreen extends AppCompatActivity {
 
     MyApplication app;
@@ -37,9 +41,25 @@ public class LandingScreen extends AppCompatActivity {
         tvMajor = (TextView) findViewById(R.id.ls_tvMajor);
     }
 
+
     @Override
     protected void onResume() {
         super.onResume();
+        if (!app.getUsername().toString().isEmpty()) {
+            //log activity
+            String data = DateFormat.getDateTimeInstance().format(new Date()) + " " + this.getClass().getSimpleName() + "\n";
+            ;
+
+            FileOutputStream fOut = null;
+            try {
+                fOut = openFileOutput(app.getUsername(), MODE_APPEND);
+                fOut.write(data.getBytes());
+                fOut.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
         tvUsername.setText(app.getUsername());
         tvFullName.setText(app.getFullname());
         tvDob.setText(app.getDob());
@@ -59,6 +79,10 @@ public class LandingScreen extends AppCompatActivity {
         MenuItem account = menu.findItem(R.id.action_account);
         MenuItem history = menu.findItem(R.id.action_history);
         MenuItem notes = menu.findItem(R.id.action_notes);
+        MenuItem home = menu.findItem(R.id.action_home);
+
+        home.setEnabled(false);
+        home.getIcon().setAlpha(100);
 
         if (app.getUsername().isEmpty()) {
             // disabled

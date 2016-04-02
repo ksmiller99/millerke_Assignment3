@@ -1,8 +1,5 @@
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <!--    tools:context=".MainActivity">-->
 
        <item
@@ -34,6 +31,14 @@
         app:showAsAction="always"
         android:enabled="false"
         android:icon="@drawable/ic_mode_edit_black_24dp"
+        android:title="Notes" />
+
+    <item
+        android:id="@+id/action_home"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:enabled="false"
+        android:icon="@drawable/ic_home_black_24dp"
         android:title="Notes"/>
 
 

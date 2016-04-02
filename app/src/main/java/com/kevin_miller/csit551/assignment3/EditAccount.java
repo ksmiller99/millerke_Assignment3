@@ -20,6 +20,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -355,12 +356,28 @@ public class EditAccount extends AppCompatActivity implements AdapterView.OnItem
         spnMajor.setOnItemSelectedListener(this);
 
 
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+
+        if (!app.getUsername().toString().isEmpty()) {
+            //log activity
+            String data = DateFormat.getDateTimeInstance().format(new Date()) + " " + this.getClass().getSimpleName() + "\n";
+            ;
+
+            FileOutputStream fOut = null;
+            try {
+                fOut = openFileOutput(app.getUsername(), MODE_APPEND);
+                fOut.write(data.getBytes());
+                fOut.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
         etUsername.setText(app.getUsername());
         etFullName.setText(app.getFullname());
         etDob.setText(app.getDob());
@@ -380,10 +397,9 @@ public class EditAccount extends AppCompatActivity implements AdapterView.OnItem
         MenuItem account = menu.findItem(R.id.action_account);
         MenuItem history = menu.findItem(R.id.action_history);
         MenuItem notes = menu.findItem(R.id.action_notes);
+        MenuItem home = menu.findItem(R.id.action_home);
 
         account.setVisible(false);
-        history.setVisible(true);
-        notes.setVisible(true);
 
         if (app.getUsername().isEmpty()) {
             // disabled
@@ -393,6 +409,8 @@ public class EditAccount extends AppCompatActivity implements AdapterView.OnItem
             history.getIcon().setAlpha(100);
             notes.setEnabled(false);
             notes.getIcon().setAlpha(100);
+            home.setEnabled(false);
+            home.getIcon().setAlpha(100);
         } else {
             //enabled
             account.setEnabled(true);
@@ -401,6 +419,8 @@ public class EditAccount extends AppCompatActivity implements AdapterView.OnItem
             history.getIcon().setAlpha(255);
             notes.setEnabled(true);
             notes.getIcon().setAlpha(255);
+            home.setEnabled(true);
+            home.getIcon().setAlpha(255);
         }
 
 
@@ -435,12 +455,19 @@ public class EditAccount extends AppCompatActivity implements AdapterView.OnItem
                 break;
 
             case R.id.action_history:
-                Toast.makeText(getApplicationContext(), "History is not implemented yet", Toast.LENGTH_SHORT).show();
+                Intent bhIntent = new Intent(EditAccount.this, BrowsingHistoryActivity.class);
+                startActivity(bhIntent);
                 break;
 
             case R.id.action_notes:
                 Toast.makeText(getApplicationContext(), "Notes is not implemented yet", Toast.LENGTH_SHORT).show();
                 break;
+
+            case R.id.action_home:
+                Intent hIntent = new Intent(EditAccount.this, LandingScreen.class);
+                startActivity(hIntent);
+                break;
+
 
             default:
                 break;

@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Patterns;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -19,14 +21,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileOutputStream;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 import static android.app.DatePickerDialog.OnDateSetListener;
 
 public class RegistrationPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    MyApplication app;
     private DatabaseHelper myDB;
 
     final Calendar myCalendar = Calendar.getInstance();
@@ -44,6 +50,7 @@ public class RegistrationPage extends AppCompatActivity implements AdapterView.O
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        app = (MyApplication) getApplication();
         myDB = new DatabaseHelper(this);
 
         final Button btnRegister = (Button) findViewById(R.id.reg_btnRegister);
@@ -211,6 +218,17 @@ public class RegistrationPage extends AppCompatActivity implements AdapterView.O
                     );
                     if (isInserted) {
                         Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
+                        //log activity
+                        String data = DateFormat.getDateTimeInstance().format(new Date()) + " Account created";
+
+                        FileOutputStream fOut = null;
+                        try {
+                            fOut = openFileOutput(username, MODE_APPEND);
+                            fOut.write(data.getBytes());
+                            fOut.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                         Intent intent = new Intent(RegistrationPage.this, MainActivity.class);
                         startActivity(intent);
                     } else {
@@ -375,6 +393,25 @@ public class RegistrationPage extends AppCompatActivity implements AdapterView.O
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (!app.getUsername().toString().isEmpty()) {
+            //log activity
+            String data = DateFormat.getDateTimeInstance().format(new Date()) + " " + this.getClass().getSimpleName() + "\n";
+            ;
+
+            FileOutputStream fOut = null;
+            try {
+                fOut = openFileOutput(app.getUsername(), MODE_APPEND);
+                fOut.write(data.getBytes());
+                fOut.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     //update the DOB field after user selects a date
     //spinner ensures correct format
     private void updateLabel() {
@@ -405,4 +442,94 @@ public class RegistrationPage extends AppCompatActivity implements AdapterView.O
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem account = menu.findItem(R.id.action_account);
+        MenuItem history = menu.findItem(R.id.action_history);
+        MenuItem notes = menu.findItem(R.id.action_notes);
+        MenuItem home = menu.findItem(R.id.action_home);
+
+        if (app.getUsername().isEmpty()) {
+            // disabled
+            account.setEnabled(false);
+            account.getIcon().setAlpha(100);
+            history.setEnabled(false);
+            history.getIcon().setAlpha(100);
+            notes.setEnabled(false);
+            notes.getIcon().setAlpha(100);
+            home.setEnabled(false);
+            home.getIcon().setAlpha(100);
+        } else {
+            //enabled
+            account.setEnabled(true);
+            account.getIcon().setAlpha(255);
+            history.setEnabled(true);
+            history.getIcon().setAlpha(255);
+            home.setEnabled(true);
+            notes.getIcon().setAlpha(255);
+            notes.setEnabled(true);
+            notes.getIcon().setAlpha(255);
+        }
+
+
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.action_help:
+
+                AlertDialog alertDialog = new AlertDialog.Builder(RegistrationPage.this).create();
+                alertDialog.setTitle("Help");
+                alertDialog.setMessage("Use the menu bar to select an activity.");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+                break;
+
+            case R.id.action_account:
+                Intent intent = new Intent(RegistrationPage.this, EditAccount.class);
+                startActivity(intent);
+                break;
+
+            case R.id.action_history:
+                Intent bhIntent = new Intent(RegistrationPage.this, BrowsingHistoryActivity.class);
+                startActivity(bhIntent);
+                break;
+
+            case R.id.action_notes:
+                Toast.makeText(getApplicationContext(), "Notes is not implemented yet", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.action_home:
+                Intent hIntent = new Intent(RegistrationPage.this, LandingScreen.class);
+                startActivity(hIntent);
+                break;
+
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }
